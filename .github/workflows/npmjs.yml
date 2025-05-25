@@ -14,10 +14,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@emravoan'
-      - run: npm install -g pnpm
+          cache: 'pnpm'
+
+      - run: corepack enable
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm run build
       - run: pnpm publish
