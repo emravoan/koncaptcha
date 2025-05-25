@@ -45,7 +45,8 @@
   "homepage": "https://github.com/emravoan/koncaptcha#readme",
   "packageManager": "pnpm@10.10.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.7",
