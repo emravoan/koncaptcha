@@ -43,6 +43,7 @@
     "url": "https://github.com/emravoan/koncaptcha/issues"
   },
   "homepage": "https://github.com/emravoan/koncaptcha#readme",
+  "packageManager": "pnpm@10.10.0",
   "publishConfig": {
     "access": "public"
   },
