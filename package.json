@@ -1,0 +1,63 @@
+{
+  "name": "@emravoan/koncaptcha",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Lightweight sliding puzzle CAPTCHA to protect websites from bots.",
+  "author": "EM Ravoan",
+  "license": "MIT",
+  "main": "dist/koncaptcha.cjs.js",
+  "module": "dist/koncaptcha.es.js",
+  "unpkg": "dist/koncaptcha.umd.js",
+  "jsdelivr": "dist/koncaptcha.umd.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/koncaptcha.es.js",
+      "require": "./dist/koncaptcha.cjs.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "prettier": "prettier --write ."
+  },
+  "keywords": [
+    "captcha",
+    "puzzle",
+    "slider",
+    "javascript",
+    "typescript",
+    "koncaptcha"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emravoan/koncaptcha"
+  },
+  "bugs": {
+    "url": "https://github.com/emravoan/koncaptcha/issues"
+  },
+  "homepage": "https://github.com/emravoan/koncaptcha#readme",
+  "packageManager": "pnpm@10.10.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "@testing-library/dom": "^10.4.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.1.4",
+    "vitest-canvas-mock": "^0.3.3"
+  }
+}

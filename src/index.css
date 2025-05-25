@@ -1,0 +1,12 @@
+@layer theme, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+#koncaptcha,
+#koncaptcha *,
+#koncaptcha :after,
+#koncaptcha :before,
+#koncaptcha ::backdrop {
+  box-sizing: border-box;
+}

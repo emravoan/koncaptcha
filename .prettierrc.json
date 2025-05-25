@@ -1,0 +1,19 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "printWidth": 180,
+  "trailingComma": "all",
+  "useTabs": false,
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": ["*.cjs", "*.mjs", "*.json", "*.config.js", "*.config.ts"],
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ]
+}
