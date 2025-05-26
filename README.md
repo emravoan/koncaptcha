@@ -3,7 +3,7 @@
 <div align="center">
 
 ![npm version](https://img.shields.io/npm/v/@emravoan/koncaptcha?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/emravoan/koncaptcha?style=flat-square)
+![npm downloads](https://img.shields.io/npm/dt/@emravoan/koncaptcha?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/emravoan/koncaptcha?style=flat-square)
 ![License](https://img.shields.io/github/license/emravoan/koncaptcha?style=flat-square)
 
@@ -27,7 +27,7 @@ Lightweight sliding puzzle CAPTCHA to protect websites from bots.
 ## 📦 Installation
 
 ```bash
-npm install @emravoan/koncaptcha
+npm i @emravoan/koncaptcha
 # or
 pnpm add @emravoan/koncaptcha
 # or
@@ -77,7 +77,7 @@ kci.onAttempt(result => {
 #### UMD (Browser)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@emravoan/koncaptcha/dist/koncaptcha.umd.js"></script>
+<script src="https://unpkg.com/@emravoan/koncaptcha"></script>
 <script>
   const el = document.getElementById('captcha');
   const kci = window.konCaptcha(el);
@@ -95,7 +95,9 @@ kci.onAttempt(result => {
 
 ## 📃 API
 
-#### `konCaptcha(element: HTMLElement, options?: IKonCaptchaOption): IKonCaptchaInstance`
+```ts
+konCaptcha(element: HTMLElement, options?: IKonCaptchaOption): IKonCaptchaInstance
+```
 
 #### Options
 
@@ -133,12 +135,12 @@ pnpm build
 
 ## 📄 License
 
-MIT
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## ❤️ Contributing
 
-Issues and PRs welcome!
+We welcome contributions! If you have suggestions, bug reports, or want to contribute code, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/emravoan/koncaptcha).
 
 ## 📞 Contact
 
-Please use [GitHub Issues](https://github.com/emravoan/koncaptcha/issues) for questions or suggestions.
+For any questions or feedback, please reach out via the [GitHub Issues](https://github.com/emravoan/koncaptcha/issues) page.
