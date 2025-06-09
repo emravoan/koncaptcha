@@ -7,6 +7,9 @@ interface IKonCaptchaOption {
   imgSrc?: string;
   deviation?: number;
   wrapperClass?: string;
+  sliderText?: string;
+  errorMessage?: string;
+  successMessage?: string;
 }
 
 interface IKonCaptchaReturn {
@@ -19,6 +22,11 @@ interface IKonCaptchaInstance {
 }
 
 function konCaptcha(container: HTMLElement, option?: IKonCaptchaOption): IKonCaptchaInstance {
+  // Props
+  const sliderText = option?.sliderText || 'Slide to complete the puzzle';
+  const errorMessage = option?.errorMessage || 'Verification success';
+  const successMessage = option?.successMessage || 'Please try again';
+
   // State variables
   const width: number = option?.width || 300;
   const height: number = option?.height || 200;
@@ -67,7 +75,7 @@ function konCaptcha(container: HTMLElement, option?: IKonCaptchaOption): IKonCap
       if (prop === 'verify') {
         isVerified = value;
         elMessage.className += ` ${value ? 'bg-blue-400' : 'bg-rose-400'}`;
-        elMessage.textContent = value ? 'Verification success' : 'Please try again';
+        elMessage.textContent = value ? successMessage : errorMessage;
         if (!value) setTimeout(reset, 1000);
         if (onAttemptCallback) {
           onAttemptCallback({ verified: value });
@@ -132,7 +140,7 @@ function konCaptcha(container: HTMLElement, option?: IKonCaptchaOption): IKonCap
     // Slider text
     const elSliderText = document.createElement('div');
     elSliderText.className = 'absolute z-0 text-gray-500 text-sm';
-    elSliderText.textContent = 'Slide to complete the puzzle';
+    elSliderText.textContent = sliderText;
     elSliderThumb.appendChild(elSliderText);
 
     // slider text eraser
