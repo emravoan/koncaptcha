@@ -1,6 +1,6 @@
 {
   "name": "@emravoan/koncaptcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "type": "module",
   "description": "Lightweight sliding puzzle CAPTCHA to protect websites from bots.",
@@ -13,6 +13,7 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/koncaptcha.es.js",
       "require": "./dist/koncaptcha.cjs.js"
     }
